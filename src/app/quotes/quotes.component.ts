@@ -30,6 +30,12 @@ export class QuotesComponent implements OnInit {
       }
     }
   }
+  addNewGoal(quote: Quotes){
+    let goalLength = this.quote.length;
+    quote.id = goalLength+1;
+    quote.createdDate = new Date(quote.createdDate)
+    this.quote.push(quote)
+  }
 
   constructor() { }
 

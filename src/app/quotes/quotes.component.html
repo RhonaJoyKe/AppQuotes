@@ -5,5 +5,5 @@
        <button (click)='toggleDetails(i)'>Show More </button>
         <app-quote-detail *ngIf='quote.showauthor'(isComplete) = 'deleteGoal($event,i)'[quote]='quote'></app-quote-detail>
       </li>
-      <app-quote-form ></app-quote-form>
+      <app-quote-form >(addQuote)="addNewQuote($event)"></app-quote-form>
 </div>
