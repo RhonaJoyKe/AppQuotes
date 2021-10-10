@@ -5,16 +5,16 @@
         <div class="form-group">
   
            
-            <input type="text" required class="form-control" id="author"[(ngModel)]="newQuote.author" name="author"#author='ngModel'>
+            <input type="text" required class="form-control" id="author" [(ngModel)]="newQuote.author" name="author" #author='ngModel' placeholder="Author"><br>
             <div [hidden]="author.valid || author.pristine" class="alert alert-danger">
                 <p>Author is required</p>
               </div>
-            Display {{newQuote.author}}
+            
         </div>
         <div class="form-group">
   
          
-            <input type="text" required class="form-control" id="createdby"[(ngModel)]="newQuote.createdby" name="createdby"#createdby='ngModel'>
+            <input type="text" required class="form-control" id="createdby"[(ngModel)]="newQuote.createdby" name="createdby"#createdby='ngModel'placeholder="Createdby"><br>
             <div [hidden]="createdby.valid ||createdby.pristine" class="alert alert-danger">
                 <p>Created By is required</p>
               </div>
@@ -23,11 +23,11 @@
         <div class="form-group">
   
             
-            <textarea class="form-control" id="quote" rows="4" [(ngModel)]="newQuote.quote" name="quote"#quote='ngModel' required></textarea>
-            <div [hidden]="quote.valid || quote.pristine" class="alert alert-danger">
+            <textarea class="form-control" id="message" rows="4" [(ngModel)]="newQuote.message" name="message"#message='ngModel'placeholder="Quote" required></textarea>
+            <div [hidden]="message.valid || message.pristine" class="alert alert-danger">
                 <p>Quote is required</p>
               </div>
         </div>
-        <input type="button" id="submit" class="btn btn-warning " value="SUBMIT"><br><br>
+        <button type="submit" class="btn btn-warning">Add Quote</button>
     </form>
   </div>

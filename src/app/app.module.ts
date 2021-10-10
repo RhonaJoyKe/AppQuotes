@@ -9,6 +9,7 @@ import { QuotesComponent } from './quotes/quotes.component';
 import { QuoteDetailComponent } from './quote-detail/quote-detail.component';
 import { DateCountPipe } from './date-count.pipe';
 import { QuoteFormComponent } from './quote-form/quote-form.component';
+import { HighestvotesDirective } from './highestvotes.directive';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { QuoteFormComponent } from './quote-form/quote-form.component';
     QuotesComponent,
     QuoteDetailComponent,
     DateCountPipe,
-    QuoteFormComponent
+    QuoteFormComponent,
+    HighestvotesDirective
   ],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA],
   imports: [

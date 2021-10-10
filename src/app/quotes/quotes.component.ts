@@ -1,4 +1,3 @@
-import { Quote } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
 import { Quotes} from '../quotes';
 
@@ -16,23 +15,18 @@ export class QuotesComponent implements OnInit {
   toggleDetails(index: number){
     this.quote[index].showauthor = !this.quote[index].showauthor;
   }
-  // deleteGoal(isComplete: any, index: number){
-  //   if (isComplete) {
-  //     this.quote.splice(index,1);
-  //   }
-  // }
-  deleteGoal(isComplete: any, index:  number){
+  deleteQuote(isComplete: any, index:  number){
     if (isComplete) {
-      let toDelete = confirm(`Are you sure you want to delete ${this.quote[index].name}?`)
+      let toDelete = confirm(`Are you sure you want to delete quote?`)
 
       if (toDelete){
         this.quote.splice(index,1)
       }
     }
   }
-  addNewGoal(quote: Quotes){
-    let goalLength = this.quote.length;
-    quote.id = goalLength+1;
+  addNewQuote(quote: Quotes){
+    let quoteLength = this.quote.length;
+    quote.id = quoteLength+1;
     quote.createdDate = new Date(quote.createdDate)
     this.quote.push(quote)
   }
