@@ -3,15 +3,32 @@
     <div class="col-md-4" id="formpart">
       <app-quote-form>(addQuote)="addNewQuote($event)"></app-quote-form>
     </div>
-  <div class="col-md-6">
-    <li *ngFor='let quote of quote; let i = index'>
-      {{quote.author}}<br>{{quote.createdDate|date}}<br>
-      <button (click)='toggleDetails(i)'>Show More </button>
-      <app-quote-detail *ngIf='quote.showauthor' (isComplete)='deleteQuote($event,i)' [quote]='quote'></app-quote-detail>
-    </li>
+      <div class="col-md-8">
+        <div class="row"*ngFor='let quote of quote; let i = index'>
+          <div class="col-md-4">
+  
+          <p><i class="fa fa-quote-left" aria-hidden="true"></i>{{quote.message}}<i class="fa fa-quote-left" aria-hidden="true"></i></p>
+          <button (click)='toggleDetails(i)'>Show More </button><br>
+         said by: {{quote.author}}<br>created on:{{quote.createdDate|date}}<br>
+          <app-quote-detail *ngIf='quote.showauthor' (isComplete)='deleteQuote($event,i)' [quote]='quote'></app-quote-detail> -->
+        
+      </div>
+      <div class="col-md-4">
+        
+          {{quote.author}}<br>{{quote.createdDate|date}}<br>
+          <button (click)='toggleDetails(i)'>Show More </button>
+          <!-- <app-quote-detail *ngIf='quote.showauthor' (isComplete)='deleteQuote($event,i)' [quote]='quote'></app-quote-detail> -->
+        
+      </div>
+      <div class="col-md-4">
+        
+          {{quote.author}}<br>{{quote.createdDate|date}}<br>
+          <button (click)='toggleDetails(i)'>Show More </button>
+          <!-- <app-quote-detail *ngIf='quote.showauthor' (isComplete)='deleteQuote($event,i)' [quote]='quote'></app-quote-detail> -->
+     
+      </div>
+
+    </div>
     </div>
   </div>
-  
-  
- 
 </div>
