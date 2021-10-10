@@ -7,7 +7,7 @@ import { Quotes} from '../quotes';
   styleUrls: ['./quotes.component.css']
 })
 export class QuotesComponent implements OnInit {
-  goals:Quotes[] = [
+  quote:Quotes[] = [
     {id:1, author:'Watch finding Nemo',createdby:'Joy'},
     {id:2,author:'Buy Cookies',createdby:'Joy'},
     
