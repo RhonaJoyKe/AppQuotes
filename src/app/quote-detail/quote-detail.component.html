@@ -4,4 +4,12 @@
 <p>{{quote.createdDate|dateCount}} days ago</p>
 
 <button (click)= 'quoteDelete(true)'>Delete</button>
+<a class="btn btn-large btn-warning" (click)='likeBtnClick()' href="#">
+    <i class="fa fa-thumbs-up" aria-hidden="true"> upVote</i></a>
+    <p>{{likes}} upvote</p>
+
+    <a class="btn btn-large btn-warning logout" (click)="dislikeBtnClick()"href="#">
+        <i class="fa fa-thumbs-down" aria-hidden="true"> downVote</i></a>
+        <p>{{dislikes}} upvote</p>
+        
 
