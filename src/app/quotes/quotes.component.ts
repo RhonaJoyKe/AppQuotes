@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Quotes} from '../quotes';
 
 @Component({
   selector: 'app-quotes',
@@ -6,6 +7,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./quotes.component.css']
 })
 export class QuotesComponent implements OnInit {
+  goals:Quotes[] = [
+    {id:1, author:'Watch finding Nemo',createdby:'Joy'},
+    {id:2,author:'Buy Cookies',createdby:'Joy'},
+    
+  ];
+
 
   constructor() { }
 
