@@ -1,4 +1,7 @@
-<p>quote-detail works!</p>
+
 
 <p>{{quote.createdby}}</p>
-<button (click)= 'quoteComplete(true)'>Delete</button>
+<p>{{quote.createdDate|dateCount}} days ago</p>
+
+<button (click)= 'quoteDelete(true)'>Delete</button>
+

@@ -2,7 +2,7 @@
     <h1>My quote app</h1>
     <li *ngFor='let quote of quote; let i = index'>
         {{quote.author}}due on {{quote.createdDate|date}}<br>
-       <button (click)='toggleDetails(i)'>Toggle Details</button>
-        <app-quote-detail *ngIf='quote.showauthor'(isComplete) = 'completeQuote($event,i)'[quote]='quote'></app-quote-detail>
+       <button (click)='toggleDetails(i)'>Show More </button>
+        <app-quote-detail *ngIf='quote.showauthor'(isComplete) = 'deleteGoal($event,i)'[quote]='quote'></app-quote-detail>
       </li>
 </div>

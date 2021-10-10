@@ -16,9 +16,18 @@ export class QuotesComponent implements OnInit {
   toggleDetails(index: number){
     this.quote[index].showauthor = !this.quote[index].showauthor;
   }
-  completeQuote(isComplete: any, index: number){
+  // deleteGoal(isComplete: any, index: number){
+  //   if (isComplete) {
+  //     this.quote.splice(index,1);
+  //   }
+  // }
+  deleteGoal(isComplete: any, index:  number){
     if (isComplete) {
-      this.quote.splice(index,1);
+      let toDelete = confirm(`Are you sure you want to delete ${this.quote[index].name}?`)
+
+      if (toDelete){
+        this.quote.splice(index,1)
+      }
     }
   }
 
