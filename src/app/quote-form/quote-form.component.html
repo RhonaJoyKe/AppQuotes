@@ -1,24 +1,32 @@
 <div class="container-fluid">
     <h2 class="text-center">Create a new Quote</h2>
     
-    <form>
+    <form #quoteForm='ngForm'>
         <div class="form-group">
   
-            <label for="name">Author</label>
-            <input type="text" required class="form-control" id="name">
+           
+            <input type="text" required class="form-control" id="name"[(ngModel)]="newQuote.author" name="author"#author='ngModel'>
+            <div [hidden]="name.valid || name.pristine" class="alert alert-danger">
+                <p>Author is required</p>
+              </div>
+            Display {{newQuote.author}}
+        </div>
+        <div class="form-group">
+  
+         
+            <input type="text" required class="form-control" id="name"[(ngModel)]="newQuote.createdby" name="createdby"#createdby='ngModel'>
+            <div [hidden]="name.valid || name.pristine" class="alert alert-danger">
+                <p>Created By is required</p>
+              </div>
   
         </div>
         <div class="form-group">
   
-            <label for="name">Created By</label>
-            <input type="text" required class="form-control" id="name">
-  
-        </div>
-        <div class="form-group">
-  
-            <label for="description">Quote</label>
-            <textarea class="form-control" id="description" rows="4" required></textarea>
-  
+            
+            <textarea class="form-control" id="description" rows="4" [(ngModel)]="newQuote.createdby" name="quote"#quote='ngModel' required></textarea>
+            <div [hidden]="name.valid || name.pristine" class="alert alert-danger">
+                <p>Quote is required</p>
+              </div>
         </div>
         <input type="button" id="submit" class="btn btn-warning " value="SUBMIT"><br><br>
     </form>
