@@ -9,8 +9,8 @@ import { Quotes} from '../quotes';
 export class QuotesComponent implements OnInit {
   quote:Quotes[] = [
     new Quotes(1, 'Sansa Stark','Jojo','The lone wolf dies but the pack survives',new Date(2021,10,4)),
-    new Quotes(2,'Aria Stark','Bre','The lone wolf dies but the pack survives ',new Date(2021,10,4)),
-    new Quotes(3,'Jon Snow','Dennis','The lone wolf dies but the pack survives',new Date(2021,10,4)),
+    new Quotes(2,'Tyrion Lannister','Bre','A mind needs books like a sword needs a whetstone ',new Date(2021,10,4)),
+    new Quotes(3,'Daenerys Targaryen','Dennis','We are going to leave the world better than we found it.',new Date(2021,10,4)),
   ];
   toggleDetails(index: number){
     this.quote[index].showauthor = !this.quote[index].showauthor;
