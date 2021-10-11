@@ -9,21 +9,41 @@
 </head>
 
 <body>
-  <div class="container">
+  <div class="container"text-center id ="body">
+    <p> Quote App Website</p>
+    <div class="container" id="quoteoverall">
     <div class="row"*ngFor='let quote of quote; let i = index'>
+      <div class="col-md-4"></div>
       <div class="col-md-4" id="quotes">
-
         <p><i class="fa fa-quote-left" aria-hidden="true"></i>{{quote.message}}<i class="fa fa-quote-left"
+          aria-hidden="true"></i></p>
+      <button type="button" class="btn btn-info" (click)='toggleDetails(i)'>Show More </button><br>
+      said by: {{quote.author}}<br>created on:{{quote.createdDate|date}}<br>
+     
+      
+        
+          <app-quote-detail *ngIf='quote.showauthor' (isComplete)='deleteQuote($event,i)' [quote]='quote'>
+          </app-quote-detail> 
+      </div>
+      </div>
+      <div class="col-md-4"></div>
+       <div class="col-md-6" > 
+
+        <!-- <p><i class="fa fa-quote-left" aria-hidden="true"></i>{{quote.message}}<i class="fa fa-quote-left"
             aria-hidden="true"></i></p>
         <button type="button" class="btn btn-info" (click)='toggleDetails(i)'>Show More </button><br>
         said by: {{quote.author}}<br>created on:{{quote.createdDate|date}}<br>
-        <app-quote-detail *ngIf='quote.showauthor' (isComplete)='deleteQuote($event,i)' [quote]='quote'>
-        </app-quote-detail> -->
-
-      </div>
+       </div>
+        
+          
+            <app-quote-detail *ngIf='quote.showauthor' (isComplete)='deleteQuote($event,i)' [quote]='quote'>
+            </app-quote-detail>  -->
+                     
+  
+     
     </div>
-
-    <div class="row">
+  </div>
+   <div class="row">
       <div class="col-md-4"></div>
       <div class="col-md-4" id="formpart">
         <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
@@ -33,23 +53,7 @@
     <div class="row">
       <app-footer></app-footer>
     </div>
-  
-        
-      </div>
-      <!-- <div class="col-md-8">
-        <div class="row"  id="modify"> -->
-          
-
-
-          
-     
-
-    
-    
-
-</body>
+   </div>
+  </body>
 
 </html>
-<!-- <div class="container" id="body">
-  <div class="row" id="overall"> -->
-  <!-- <div class="col-md-4" id="formpart">  -->

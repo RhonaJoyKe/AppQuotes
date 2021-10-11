@@ -1,11 +1,11 @@
 #body{
     background-color: #F9B208;
-    padding-left: 10px;
+    /* /* padding-left: 10px;
     display: flex;
     /* align-items: flex-start; */
-    justify-content: space-around;
-    margin-right: 3rem;
-}
+    /* justify-content: space-around;
+    margin-right: 3rem;  */
+} 
 #formpart{
     background-color: #F98404;
     margin-top: 30px;
@@ -14,12 +14,12 @@ margin-left: 1rem;
 /* margin-left: 5px; */
 }
 
-    
+   
 
 #quotes{
     margin-bottom: 1rem;
     padding:1rem;
-    border-radius: 30px;
+    border-radius: 20px;
     background-color: purple;
 }
 /* #modify{
