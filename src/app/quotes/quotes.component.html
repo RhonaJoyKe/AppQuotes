@@ -1,55 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
 </head>
+
 <body>
   <div class="container">
+    <div class="row"*ngFor='let quote of quote; let i = index'>
+      <div class="col-md-4" id="quotes">
 
+        <p><i class="fa fa-quote-left" aria-hidden="true"></i>{{quote.message}}<i class="fa fa-quote-left"
+            aria-hidden="true"></i></p>
+        <button type="button" class="btn btn-info" (click)='toggleDetails(i)'>Show More </button><br>
+        said by: {{quote.author}}<br>created on:{{quote.createdDate|date}}<br>
+        <app-quote-detail *ngIf='quote.showauthor' (isComplete)='deleteQuote($event,i)' [quote]='quote'>
+        </app-quote-detail> -->
 
-  <div class="container" id="body">
-    <!-- <div class="row" id="overall"> -->
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-4"></div>
       <div class="col-md-4" id="formpart">
         <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
       </div>
-        <div class="col-md-8">
-          <div class="row"*ngFor='let quote of quote; let i = index' id="modify">
-             <div class="col-md-4" id="quotes">
-    
-                <p><i class="fa fa-quote-left" aria-hidden="true"></i>{{quote.message}}<i class="fa fa-quote-left" aria-hidden="true"></i></p>
-                <button type="button" class="btn btn-info"(click)='toggleDetails(i)'>Show More </button><br>
-               said by: {{quote.author}}<br>created on:{{quote.createdDate|date}}<br>
-                <app-quote-detail *ngIf='quote.showauthor' (isComplete)='deleteQuote($event,i)' [quote]='quote'></app-quote-detail> -->
-              
-            </div>
-            
-            
-        <!-- <div class="col-md-4">
-          
-            {{quote.author}}<br>{{quote.createdDate|date}}<br>
-            <button (click)='toggleDetails(i)'>Show More </button>
-             <app-quote-detail *ngIf='quote.showauthor' (isComplete)='deleteQuote($event,i)' [quote]='quote'></app-quote-detail> 
-          
-        </div>
-        <div class="col-md-4">
-          
-            {{quote.author}}<br>{{quote.createdDate|date}}<br>
-            <button (click)='toggleDetails(i)'>Show More </button>
-             <app-quote-detail *ngIf='quote.showauthor' (isComplete)='deleteQuote($event,i)' [quote]='quote'></app-quote-detail> 
-       
-        </div> -->
-  
+      <div class="col-md-4"></div>
       </div>
-      <!-- </div> -->
+    <div class="row">
+      <app-footer></app-footer>
     </div>
+  
+        
+      </div>
+      <!-- <div class="col-md-8">
+        <div class="row"  id="modify"> -->
+          
+
+
+          
+     
+
     
-  </div>
-  <div class="row">
-    <app-footer></app-footer>
-  </div>
-</div>
+    
+
 </body>
+
 </html>
+<!-- <div class="container" id="body">
+  <div class="row" id="overall"> -->
+  <!-- <div class="col-md-4" id="formpart">  -->
