@@ -1,7 +1,16 @@
 #body{
-    /* background-color: black; */
+    background-color: #F9B208;
 }
 #formpart{
-    background-color: chartreuse;
+    background-color: #F98404;
     margin-top: 30px;
+}
+#quotes{
+    margin-bottom: 3rem;
+    padding:1rem;
+    border-radius: 30px;
+    background-color: purple;
+}
+#modify{
+    padding-left: 3rem;
 }
