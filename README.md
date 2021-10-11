@@ -32,7 +32,7 @@ ng serve
  * Angular CLI
  * Typescript
 ## Live link to view the project
- <a href="https://wilsonkinyua.github.io/quote-generator/">View Quotes</a>
+ <a href="https://rhonajoyke.github.io/AppQuotes/">View Quotes</a>
  ## Known Bugs
  So far so good there are no bugs related to this project 😎
 ## Support and contact details 🙂
